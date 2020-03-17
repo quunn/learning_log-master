@@ -1,0 +1,41 @@
+{% extends "learning_logs/base.html" %}
+
+{% block header %}
+  <div class="jumbotron">
+    <h1>记录你的奇思妙想</h1>
+  </div>
+{% endblock header %}
+
+{% block content %}
+
+  <h2>
+    <a href="{% url 'users:register' %}">注册一个账户</a>以开始拥有你自己的学习笔记，然后随时随地记录你学到的点点滴滴。
+  </h2><br>
+  <h2>
+    你可以在<a href="{% url 'learning_logs:my_topics' %}">我的主题</a>中创建新条目，支持 MARK DOWN 格式的书写，期待你的分享！
+  </h2><br><br>
+  <div class="container">
+    <div class="row">
+      <h3><p>站点精选</p></h3><br>
+      <div class="col-lg-4">
+        <a href="{% url 'learning_logs:topic' 7 %}">
+          <img src="http://pic.yupoo.com/dxmdmw/b1568393/8e3e5fad.jpg"  width="300" height="240"  alt="图片">
+        </a><br>
+        <h3><p><strong>笑是最重要的事</strong></p></h3>
+      </div>      
+      <div class="col-lg-4">
+        <a href="{% url 'learning_logs:topic' 11 %}">
+          <img src="http://pic.yupoo.com/dxmdmw/558a7765/f61ba11a.jpg"  width="300" height="240"  alt="图片">
+        </a><br>
+        <h3><p><strong>LeetCode上那些有趣的算法题</strong></p></h3>
+        </div>
+      <div class="col-lg-4">
+          <a href="{% url 'learning_logs:topics' %}">
+          <img src="http://pic.yupoo.com/dxmdmw/bf5908c9/3787b25e.jpg"  width="300" height="240"  alt="图片" />
+        </a><br>
+        <h3><p><strong>查看更多......</strong></p></h3>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
